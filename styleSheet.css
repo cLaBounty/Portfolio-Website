@@ -1,132 +1,71 @@
-body {
-	margin: 0;
-}
-
-main {
-	position: absolute;
-	top: 70px;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	height: 100vh;
-	background: url(assets/background.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-
-}
-
-.menuBar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 70px; 
-	margin: 0 auto;
-}
-
-header {
-	position: fixed;
-	top: 0%;
-	width: 100%;
-	background: #4285f4;
-}
-
-header::after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
-.logo {
-	width: 75px;
-	height: 75px;
-	margin-left: 5px;
-}
-
-nav {
-	display: flex;
-	align-items: center;
-}
-
-nav li {
-	display: inline-block;
-	margin: 0 40px 0 40px;
-}
-
-nav a {
-	transition: 0.3s;
-	display: flex;
-	justify-content: space-around;
+* {
 	margin: 0;
 	padding: 0;
-	list-style: none;
-	
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: bold;
-	font-size: 25px;
-	color: black;
-	text-decoration: none;
-	text-transform: uppercase;
+	font-family: Arial;
 }
 
-nav a.active {
-	pointer-events: none;
-	cursor: default;
-	
-	color: white;
-	text-decoration: underline;
+body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("assets/background.jpg");
+    background-position: 10% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* doesn't work on mobile */
+    z-index: -5;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-nav a:hover:not(.active) {
-	transition: 0.18s;
-	color:rgb(158, 167, 247);
-	text-decoration: underline;
-}
 
-#navBreak {
-	position: fixed;
-	top: 70px;
-	margin: 0;
-	width: 100%;
-	color: white;
-	background-color: white;
-	height: 3px;
-}
-
-#centerHeader {
-	margin: 0 auto;
-	transform: translateY(-20%);
+#coming-soon-message {
+	font-size: 24px;
 	color: white;
 	text-align: center;
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 45px;
-	line-height: 60%;
+	line-height: 65px;
 }
 
-#viewResume {
-	transition: 0.5s;
-	margin: 0 auto;
-	transform: translateY(-40%);
-	width: 350px;
-	padding: 10px;
+#view-resume-btn {
+	margin: 25px;
+	padding: 15px;
+	font-size: 33px;
 	color: black;
-	border-radius: 25px;
 	background-color: white;
+	border: none;
+	outline: none;
+	border-radius: 25px;
 }
 
-#viewResume:hover{
-	transition: 0.2s;
-	cursor: pointer;
+
+#view-resume-btn:hover {
+	background-color: #1d8ef2;
 	color: white;
-	background-color: rgb(66, 133, 230, 0.5);
+	cursor: pointer;
 
+	transition: 0.25s;
 }
 
-#googleForm {
-	margin-left: 2%;
-	margin-top: 2%;
-	
 
-	
-	background-color: rgb(0, 0, 0, 0.3);
+/* Mobile Changes */
+@media (max-width: 680px) {
+    /* Credit: https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile */
+    body:before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        background-image: url("assets/background.jpg");
+        background-position: 70% 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+	}
 }
