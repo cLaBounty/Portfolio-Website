@@ -7,7 +7,7 @@ const githubLink = 'https://github.com/cLaBounty';
 // document.getElementById('jobTitle').innerHTML = jobTitle;
 
 function showResume() {
-    window.open(resumeFile);
+    window.open(resumeFile, null);
 }
 
 function openLinkedin() {
