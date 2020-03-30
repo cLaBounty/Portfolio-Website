@@ -1,5 +1,5 @@
 const jobTitle = 'Application Developer';
-const resumeFile = 'file:///D:/Projects/Portfolio Website/documents/Resume.pdf';
+const resumeFile = 'documents/Resume.pdf';
 const linkedinLink = 'http://www.linkedin.com/in/cameronlabounty';
 const githubLink = 'https://github.com/cLaBounty';
 
