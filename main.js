@@ -1,5 +1,5 @@
 const jobTitle = 'Application Developer';
-const resumeFile = 'documents/Resume.pdf';
+const resumeFile = 'file:///D:/Projects/Portfolio Website/documents/Resume.pdf';
 const linkedinLink = 'http://www.linkedin.com/in/cameronlabounty';
 const githubLink = 'https://github.com/cLaBounty';
 
@@ -7,7 +7,7 @@ const githubLink = 'https://github.com/cLaBounty';
 // document.getElementById('jobTitle').innerHTML = jobTitle;
 
 function showResume() {
-    window.open(resumeFile, null);
+    window.open(resumeFile);
 }
 
 function openLinkedin() {
