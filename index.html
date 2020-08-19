@@ -1,25 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
     <title>Cameron LaBounty</title>
-
-    <link href="styleSheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <div id="coming-soon-message">
+    <header>
+        <button class="mobile-nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="button"><a target="_blank" href="resume.pdf">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home">
         <h1>Cameron LaBounty</h1>
-        <h2>Portfolio Website</h2>
-        <h3>(coming soon)</h3>
+        <p>I am a Software Engineer...</p>
+        <div class="home-btns">
+            <a class="button" href="#projects">Projects</a>
+            <a target="_blank" class="button" href="resume.pdf">Resume</a>
+        </div>
+    </section>
 
-        <a class="button" href="documents\resume.pdf" target="_blank">View My Resume</a>
-    </div>
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
 
+        <!-- Rubik's Cube Solver -->
+        <div class="project">
+            <!-- Play GIF on hover -->
+            <div class="preview">
+                <img src="assets/rubiksCubeSolverCover.jpg" alt="Rubik's Cube Solver Screenshot">
+            </div>
+            <div class="description">
+                <h3>Rubik's Cube Solver</h3>
+                <ul class="used-tech">
+                    <li>Java</li>
+                    <li>Processing</li>
+                </ul>
+                <h4>Summary</h4>
+                <p>A 3D Rubik's Cube simulation and solver for 2x2, 3x3, and 4x4 cubes. Implemented a popular
+                    blindfolded solving method used by competitive speed cubers. Added functionality to solve and
+                    manually turn the cube by clicking a face and dragging the mouse in the direction of the turn.</p>
 
-    <!--<script type="text/javascript" src="main.js"></script>-->
+                <ul class="visit-project-btns">
+                    <li><a target="_blank" class="button" href="https://www.youtube.com/watch?v=oZSwaQ6uV1U"><i
+                                class="fa fa-eye" aria-hidden="true"></i> Demo</a></li>
+                    <li><a target="_blank" class="button" href="https://clabounty.itch.io/rubiks-cube-solver"><i
+                                class="fa fa-download" aria-hidden="true"></i></i> Download</a></li>
+                    <li><a target="_blank" class="button" href="https://github.com/cLaBounty/rubiksCubeSolver"><i
+                                class="fa fa-code" aria-hidden="true"></i> Code</a></li>
+                </ul>
+
+                <a class="button learn-more" href="#rubiksCubeSolver.html">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Golf Stats Tracker -->
+        <div class="project">
+        </div>
+
+        <!-- Sudoku Solver -->
+        <div class="project">
+        </div>
+
+        <!-- Golf Game-->
+        <div class="project">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+
+        <div class="email-form">
+            <form>
+                <input type="name" placeholder="Name"><br>
+                <input type="email" placeholder="Email"><br>
+                <input type="text" placeholder="Subject"><br>
+                <textarea name="ContactCommentt" rows="9" cols="21" placeholder="Message"></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
+        <ul class="social-list">
+            <li><i class="fas fa-envelope" aria-hidden="true"></i>camlabounty@gmail.com</li>
+            <li><a target="_blank" href="https://github.com/cLaBounty"><i class="fa fa-github"
+                        aria-hidden="true"></i>github.com/cLaBounty</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/cameronlabounty/"><i class="fa fa-linkedin-square"
+                        aria-hidden="true"></i>linkedin.com/in/cameronlabounty</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Designed and Developed by <strong>Cameron LaBounty</strong></p>
+    </footer>
+
 </body>
 
 </html>
