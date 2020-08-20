@@ -14,121 +14,128 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js"></script>
+    <link rel="icon" href="assets/codingIcon.png">
+
     <title>Cameron LaBounty</title>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <header>
-        <button id="mobile-nav-toggle" aria-label="toggle navigation">
-            <span id="hamburger"></span>
-        </button>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a target="_blank" class="button" href="resume.pdf">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Navbar -->
+<header>
+    <button id="mobile-nav-toggle" aria-label="toggle navigation">
+        <span id="hamburger"></span>
+    </button>
 
-    <!-- Home -->
-    <section id="home">
-        <h1>Cameron LaBounty</h1>
-        <p>I am a Developer and Student..</p>
-        <div class="home-btns">
-            <a class="button" href="#projects">Projects</a>
-            <a target="_blank" class="button" href="resume.pdf">Resume</a>
-        </div>
-    </section>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a target="_blank" class="button" href="resume.pdf">Resume</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2 class="section-title">Projects</h2>
+<!-- Home -->
+<section id="home">
+    <h1>Cameron LaBounty</h1>
+    <p>I am a Software Developer and Student attending Champlain College seeking a B.S. in Computer
+        Science with minors in Game Programming and Mathematics, and a specialization in Mobile App Development. I am
+        currently seeking a Software Engineering Internship for Summer 2021.</p>
+    <div id="home-btns">
+        <a class="button" href="#projects">Projects</a>
+        <a target="_blank" class="button" href="resume.pdf">Resume</a>
+    </div>
+</section>
 
-        <!-- Rubik's Cube Solver -->
-        <div class="project">
+<!-- Projects -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
 
-            <!-- Play MP4 on hover -->
-            <video class="preview" width="320" height="176" autoplay>
+    <!-- Rubik's Cube Solver -->
+    <div class="project">
+
+        <div class="preview">
+            <img width="400" height="225" src="assets/rubiksCubeSolverCover.jpg" style="display: none;">
+            <video width="400" height="225" poster="assets/rubiksCubeSolverCover.jpg">
                 <source src="assets/rubiksCubeSolverPreview.mp4" type="video/mp4">
             </video>
-
-            <div class="description">
-                <h3>Rubik's Cube Solver</h3>
-                <ul class="used-tech">
-                    <li>Java</li>
-                    <li>Processing</li>
-                </ul>
-                <h4>Summary</h4>
-                <p>A 3D Rubik's Cube simulation and solver for 2x2, 3x3, and 4x4 cubes. Implemented a popular
-                    blindfolded solving method used by competitive speed cubers. Added functionality to solve
-                    and
-                    manually turn the cube by clicking a face and dragging the mouse in the direction of the
-                    turn.</p>
-
-                <ul class="visit-project-btns">
-                    <li><a target="_blank" class="button" href="https://www.youtube.com/watch?v=oZSwaQ6uV1U"><i
-                                class="fa fa-eye" aria-hidden="true"></i> Demo</a></li>
-                    <li><a target="_blank" class="button" href="https://clabounty.itch.io/rubiks-cube-solver"><i
-                                class="fa fa-download" aria-hidden="true"></i></i> Download</a></li>
-                    <li><a target="_blank" class="button" href="https://github.com/cLaBounty/rubiksCubeSolver"><i
-                                class="fa fa-code" aria-hidden="true"></i> Code</a></li>
-                </ul>
-
-                <a class="button learn-more" href="#rubiksCubeSolver.html">Learn More</a>
-            </div>
         </div>
 
-        <!-- Golf Stats Tracker -->
-        <div class="project">
+        <div class="description">
+            <h3>Rubik's Cube Solver</h3>
+            <ul class="used-tech">
+                <li>Java</li>
+                <li>Processing</li>
+            </ul>
+            <h4>Summary</h4>
+            <p>A 3D Rubik's Cube simulation and solver for 2x2, 3x3, and 4x4 cubes. Implemented a popular
+                blindfolded solving method used by competitive speed cubers. Added functionality to solve
+                and
+                manually turn the cube by clicking a face and dragging the mouse in the direction of the
+                turn.</p>
+
+            <ul class="visit-project-btns">
+                <li><a target="_blank" class="button" href="https://www.youtube.com/watch?v=oZSwaQ6uV1U"><i
+                            class="fa fa-eye" aria-hidden="true"></i> Demo</a></li>
+                <li><a target="_blank" class="button" href="https://clabounty.itch.io/rubiks-cube-solver"><i
+                            class="fa fa-download" aria-hidden="true"></i></i> Download</a></li>
+                <li><a target="_blank" class="button" href="https://github.com/cLaBounty/rubiksCubeSolver"><i
+                            class="fa fa-code" aria-hidden="true"></i> Code</a></li>
+            </ul>
+
+            <a class="button learn-more" href="#rubiksCubeSolver.html">Learn More</a>
         </div>
+    </div>
 
-        <!-- Sudoku Solver -->
-        <div class="project">
-        </div>
+    <!-- Golf Stats Tracker -->
+    <div class="project">
+    </div>
 
-        <!-- Golf Game-->
-        <div class="project">
-        </div>
-    </section>
+    <!-- Rubik's Cube Solver -->
+    <div class="project">
+    </div>
 
-    <section id="contact">
-        <h2 class="section-title">Contact</h2>
+    <!-- Golf Game-->
+    <div class="project">
+    </div>
+</section>
 
-        <div class="email-form">
-            <form>
-                <input type="name" placeholder="Name"><br>
-                <input type="email" placeholder="Email"><br>
-                <input type="text" placeholder="Subject"><br>
-                <textarea name="ContactComment" rows="9" cols="21" placeholder="Message"></textarea><br>
-                <input type="submit" value="Send">
-            </form>
-        </div>
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
 
-        <ul class="social-list">
-            <li><i class="fas fa-envelope" aria-hidden="true"></i>camlabounty@gmail.com</li>
-            <li><a target="_blank" class="link" href="https://github.com/cLaBounty"><i class="fa fa-github"
-                        aria-hidden="true"></i>github.com/cLaBounty</a></li>
-            <li><a target="_blank" class="link" href="https://www.linkedin.com/in/cameronlabounty/"><i
-                        class="fa fa-linkedin-square" aria-hidden="true"></i>linkedin.com/in/cameronlabounty</a>
-            </li>
-        </ul>
-    </section>
+    <div class="email-form">
+        <form action="https://formspree.io/xvownqgp" method="POST" autocomplete="off">
+            <input type="name" name="Name" placeholder="Name" required><br>
+            <input type="email" name="Email" placeholder="Email" required><br>
+            <input type="text" name="Subject" placeholder="Subject"><br>
+            <textarea rows="9" cols="21" name="Message" placeholder="Message" required></textarea><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
 
-    <footer>
-        <p>Designed and Developed by <strong>Cameron LaBounty</strong></p>
-    </footer>
+    <ul class="social-list">
+        <li><i class="fas fa-envelope" aria-hidden="true"></i>camlabounty@gmail.com</li>
+        <li><a target="_blank" class="link" href="https://github.com/cLaBounty"><i class="fa fa-github"
+                    aria-hidden="true"></i>github.com/cLaBounty</a></li>
+        <li><a target="_blank" class="link" href="https://www.linkedin.com/in/cameronlabounty/"><i
+                    class="fa fa-linkedin-square" aria-hidden="true"></i>linkedin.com/in/cameronlabounty</a>
+        </li>
+    </ul>
+</section>
 
+<footer>
+    <p>Designed and Developed by <strong>Cameron LaBounty</strong></p>
+</footer>
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
 </body>
 
 </html>
