@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     // hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
     window.onscroll = () => {
@@ -35,17 +36,13 @@ $(document).ready(function () {
     });
 
     // play preview on hover
-    // NOT WORKING FOR MULTIPLE
-    $(".preview").hover(() => {
-        $(".preview img").css("display", "none");
-        $(".preview video").css("display", "flex");
-        $(".preview video").get(0).play();
+    $(".preview video").hover((event) => {
+        $(event.target).get(0).play();
     });
 
-    $(".preview").mouseleave(() => {
-        $(".preview img").css("display", "flex");
-        $(".preview video").css("display", "none");
-        $(".preview video").get(0).pause();
+    $(".preview video").mouseleave((event) => {
+        $(event.target)[0].currentTime = 0;
+        $(event.target).get(0).pause();
     });
 
 
