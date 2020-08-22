@@ -56,9 +56,9 @@
     <h2 class="section-title">Projects</h2>
 
     <!-- Rubik's Cube Solver -->
-    <div class="project">
+    <div class="right-project">
         <div class="preview">
-            <video>
+            <video muted playsinline>
                 <source src="assets/rubiksCubeSolverPreview.mp4" type="video/mp4">
             </video>
         </div>
@@ -92,7 +92,7 @@
     </div>
 
     <!-- Golf Stats Tracker -->
-    <div class="project">
+    <div class="left-project">
         <div class="description">
             <h3>Golf Stats Tracker</h3>
             <ul class="used-tech">
@@ -118,7 +118,7 @@
             </ul>
         </div>
         <div class="preview">
-            <video>
+            <video muted playsinline>
                 <source src="assets/golfStatsTrackerPreview.mp4" type="video/mp4">
                 <!--<source src="assets/rubiksCubeSolverPreview.mp4" type="video/mp4">-->
             </video>
@@ -126,9 +126,9 @@
     </div>
 
     <!-- Sudoku Solver -->
-    <div class="project">
+    <div class="right-project">
         <div class="preview">
-            <video>
+            <video muted playsinline>
                 <source src="assets/sudokuSolverPreview.mp4" type="video/mp4">
             </video>
         </div>
@@ -160,7 +160,7 @@
     </div>
 
     <!-- Golf Game-->
-    <div class="project">
+    <div class="left-project">
         <div class="description">
             <h3>Golf Game</h3>
             <ul class="used-tech">
@@ -181,7 +181,7 @@
             </ul>
         </div>
         <div class="preview">
-            <video>
+            <video muted playsinline>
                 <!--<source src="assets/golfGamePreview.mp4" type="video/mp4">-->
                 <source src="assets/rubiksCubeSolverPreview.mp4" type="video/mp4">
             </video>
@@ -192,28 +192,42 @@
 
 <section id="contact">
     <h2 class="section-title">Contact</h2>
-
-    <div class="email-form">
-        <form action="https://formspree.io/xvownqgp" method="POST" autocomplete="off">
-            <input type="name" name="Name" placeholder="Name" required><br>
-            <input type="email" name="Email" placeholder="Email" required><br>
-            <input type="text" name="Subject" placeholder="Subject"><br>
-            <textarea rows="9" cols="21" name="Message" placeholder="Message" required></textarea><br>
-            <input type="submit" value="Send Message">
-        </form>
+    <div id="contact-content">
+        <div class="email-form">
+            <form action="https://formspree.io/xvownqgp" method="POST" autocomplete="off">
+                <div class="input-field">
+                    <input name="Name" type="text" spellcheck="false" autocomplete="off" required>
+                    <label for="Name" class="input-label"><span class="label-text">Name</span></label>
+                </div>
+                <div class="input-field">
+                    <input name="Email" type="text" spellcheck="false" autocomplete="off" required>
+                    <label for="Email" class="input-label"><span class="label-text">Email</span></label>
+                </div>
+                <div class="input-field">
+                    <input name="Subject" type="text" spellcheck="true" autocomplete="off" required>
+                    <label for="Subject" class="input-label"><span class="label-text">Subject</span></label>
+                </div>
+                <div class="input-field message-field">
+                    <textarea name="Message" type="text" spellcheck="true" autocomplete="off" required></textarea>
+                    <label for="Message" class="input-label"><span class="label-text">Message</span></label>
+                </div>
+                <button type="submit" class="button" id="send-btn"><span class="under-anim">Send Message</span></button>
+            </form>
+        </div>
+        <div class="social-list">
+            <ul class="social-list-content">
+                <li>
+                    <a target="_blank" class="link" href="https://github.com/cLaBounty"><i class="fab fa-github"></i>
+                        <span class="under-anim">github.com/cLaBounty</span></a>
+                </li>
+                <li>
+                    <a target="_blank" class="link" href="https://www.linkedin.com/in/cameronlabounty/"><i
+                            class="fab fa-linkedin-in"></i> <span
+                            class="under-anim">linkedin.com/in/cameronlabounty</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
-
-    <ul class="social-list">
-        <li><i class="fas fa-envelope" aria-hidden="true"></i>camlabounty@gmail.com</li>
-        <li>
-            <a target="_blank" class="link" href="https://github.com/cLaBounty"><i class="fab fa-github"></i><span
-                    class="under-anim">github.com/cLaBounty</span></a>
-        </li>
-        <li>
-            <a target="_blank" class="link" href="https://www.linkedin.com/in/cameronlabounty/"><i
-                    class="fab fa-linkedin-in"></i><span class="under-anim">linkedin.com/in/cameronlabounty</span></a>
-        </li>
-    </ul>
 </section>
 
 <footer>
