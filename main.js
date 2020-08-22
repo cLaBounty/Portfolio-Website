@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    if ($(document).width() < 1250) {
+        console.log("Mobile");
+        $("#test").insertBefore("test2");
+
+    }
+
+
     // hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
     window.onscroll = () => {
@@ -45,5 +52,9 @@ $(document).ready(function () {
         $(event.target).get(0).pause();
     });
 
+    // auto resize message text area
+    $(document).on('input', 'textarea', function () {
+        $(this).outerHeight("3em").outerHeight(this.scrollHeight);
+    });
 
 });
