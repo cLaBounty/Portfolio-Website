@@ -1,9 +1,12 @@
 $(document).ready(function () {
+    // check if user is on iPhone and set autoplay on videos
+    var agent = navigator.userAgent;
+    var isIphone = ((agent.indexOf('iPhone') != -1) || (agent.indexOf('iPod') != -1));
 
-    if ($(document).width() < 1250) {
-        console.log("Mobile");
-        $("#test").insertBefore("test2");
-
+    if (isIphone) {
+        $("video").each(() => {
+            $(this).attr("autoplay", true);
+        });
     }
 
 
@@ -53,7 +56,7 @@ $(document).ready(function () {
     });
 
     // auto resize message text area
-    $(document).on('input', 'textarea', function () {
+    $(document).on('input', 'textarea', () => {
         $(this).outerHeight("3em").outerHeight(this.scrollHeight);
     });
 
