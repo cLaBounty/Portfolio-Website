@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // check if user is on iPhone and set autoplay on videos
+    // set autoplay on videos if user is on iPhone or iPod
     var agent = navigator.userAgent;
     var isIphone = ((agent.indexOf('iPhone') != -1) || (agent.indexOf('iPod') != -1));
 
@@ -8,7 +8,6 @@ $(document).ready(function () {
             $(this).attr("autoplay", true);
         });
     }
-
 
     // hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
@@ -22,8 +21,8 @@ $(document).ready(function () {
         prevScrollpos = currentScrollPos;
     }
 
+    // mobile navbar
     $("#mobile-nav-toggle").click(() => {
-
         if ($("body").hasClass("mobile-nav-open")) {
             document.body.classList.remove("mobile-nav-open");
 
@@ -46,18 +45,17 @@ $(document).ready(function () {
     });
 
     // play preview on hover
-    $(".preview video").hover((event) => {
+    $("video").hover((event) => {
         $(event.target).get(0).play();
     });
 
-    $(".preview video").mouseleave((event) => {
+    $("video").mouseleave((event) => {
         $(event.target)[0].currentTime = 0;
         $(event.target).get(0).pause();
     });
 
     // auto resize message text area
-    $(document).on('input', 'textarea', () => {
+    $(document).on('input', 'textarea', function () {
         $(this).outerHeight("3em").outerHeight(this.scrollHeight);
     });
-
 });
