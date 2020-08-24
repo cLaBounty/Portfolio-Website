@@ -16,29 +16,29 @@
     --clr-light: #e7e7e7;
     --clr-accent: #448ee5;
 
-    --fs-h1: 5.75rem;
-    --fs-h2: 3.75rem;
-    --fs-h3: 2.05rem;
-    --fs-h4: 1.5rem;
-    --fs-home-btn: 1.5rem;
-    --fs-project-btn: 1.20rem;
-    --fs-tech-btn: 1.20rem;
-    --fs-nav: 1.3rem;
-    --fs-body: 1.125rem;
+    --fs-h1: 5.5em;
+    --fs-h2: 3.75em;
+    --fs-h3: 2.05em;
+    --fs-h4: 1.5em;
+    --fs-home-btn: 1.35em;
+    --fs-project-btn: 1.15em;
+    --fs-tech-btn: 1em;
+    --fs-nav: 1.175em;
+    --fs-body: 1.15em;
 }
 
 /* Smaller Screens */
 @media (max-width: 1050px) {
     :root {
-        --fs-h1: 3.75rem;
-        --fs-h2: 2.25rem;
-        --fs-h3: 1.65rem;
-        --fs-h4: 1.25rem;
-        --fs-home-btn: 1.15rem;
-        --fs-project-btn: 0.92rem;
-        --fs-tech-btn: 1.05rem;
-        --fs-nav: 1.4em;
-        --fs-body: 1rem;
+        --fs-h1: 3.75em;
+        --fs-h2: 2.5em;
+        --fs-h3: 1.6em;
+        --fs-h4: 1.25em;
+        --fs-home-btn: 1.25em;
+        --fs-project-btn: 0.84em;
+        --fs-tech-btn: 1em;
+        --fs-nav: 1.45em;
+        --fs-body: 1.1em;
     }
 }
 
@@ -226,7 +226,7 @@ header {
 #home p {
     max-width: 36.5em;
     margin: 1em 0 1.5em 0;
-    font-size: calc(var(--fs-body) + 0.25rem);
+    font-size: calc(var(--fs-body) + 0.2em);
 }
 
 #home-btns {
@@ -250,7 +250,7 @@ header {
     flex-direction: row;
     margin-bottom: 5em;
 }
-.desktop-preview {
+.desktop-preview, .learn-more-preview {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,7 +264,7 @@ header {
 video {
     display: block;
     width: 100%;
-    border-radius: 2em;
+    border-radius: 1.5em;
     box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.5);
 }
 .description {
@@ -336,7 +336,6 @@ video {
 .email-form, .social-list {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 50%;
 }
 
@@ -353,6 +352,7 @@ video {
 .social-list-content li a {
     display: flex;
     align-items: center;
+    width: max-content;
     font-size: 1.4em;
 }
 
@@ -463,7 +463,7 @@ video {
 .email-form form input:focus + .input-label .label-text,
 .email-form form input:valid + .input-label .label-text {
     transform: translateY(-100%);
-    font-size: calc(var(--fs-body) * 0.9);
+    font-size: calc(var(--fs-body) * 0.75);
     color: var(--clr-accent);
 }
 
@@ -471,7 +471,7 @@ video {
 .email-form form textarea:valid + .input-label .label-text {
     position: relative;
     transform: translateY(-100%);
-    font-size: calc(var(--fs-body) * 0.9);
+    font-size: calc(var(--fs-body) * 0.75);
     color: var(--clr-accent);
 }
 
@@ -504,6 +504,28 @@ footer p {
     margin: 0 auto;
     padding: 1rem 0;
 }
+
+/* Learn More Pages */
+.learn-more-page {
+    padding: 8em 0 4em 0;
+}
+.learn-more-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.learn-more-info {
+    width: 50%;
+    padding-right: 2.5em;
+}
+.learn-more-preview {
+    width: 50%;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+
+
 
 /* Smaller Device Changes */
 @media (max-width: 1050px) { 
@@ -626,9 +648,9 @@ footer p {
     #home p {
         text-align: center;
         margin: 0.5em 0 1em 0;
+        font-size: var(--fs-body);
     }
         
-
     #home-btns {
     }
 
@@ -697,11 +719,11 @@ footer p {
         width: 100%;
     }
     .social-list-content li {
-        font-size: 2.1em;
+        font-size: 2em;
     }
     .social-list-content li i {
         color: var(--clr-accent);
-        font-size: 1.7em;
+        font-size: 1.6em;
         padding: 0;
     }
     #linkedin-square {
@@ -711,11 +733,25 @@ footer p {
     
     #linkedin-square i {
         background-color: var(--clr-accent);
-        font-size: 1.25em;
+        font-size: 1.175em;
         padding: 0.15em;
     }
 
     .social-list-content .under-anim {
         display: none;
+    }
+
+    .learn-more-page {
+        padding: 6em 0 1em 0;
+    }
+    .learn-more-top {
+        flex-direction: column;
+    }
+    .learn-more-info {
+        width: 100%;
+        padding: 0;
+    }
+    .learn-more-preview {
+        width: 100%;
     }
 }

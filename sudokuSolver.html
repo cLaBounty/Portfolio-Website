@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="assets/codingIcon.png">
+
+    <title>Cameron LaBounty | Sudoku Solver</title>
+</head>
+
+<!-- Navbar -->
+<header>
+    <button id="mobile-nav-toggle" aria-label="toggle navigation">
+        <span id="hamburger"></span>
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html#home" class="nav-link"><span class="under-anim">Home</span></a></li>
+            <li><a href="index.html#projects" class="nav-link"><span class="under-anim">Projects</span></a></li>
+            <li><a href="index.html#contact" class="nav-link"><span class="under-anim">Contact</span></a></li>
+            <li><a target="_blank" class="button" href="resume.pdf"><span class="under-anim">Resume</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="learn-more-page">
+        <h2>Sudoku Solver</h2>
+        <div class="learn-more-top">
+            <div class="learn-more-info">
+                <ul class="used-tech">
+                    <li>Python</li>
+                    <li>Pygame</li>
+                </ul>
+                <ul class="visit-project-btns">
+                    <li><a target="_blank" class="button" href="https://www.youtube.com/watch?v=mpyLjhE6kZ0"><i
+                                class="fa fa-eye" aria-hidden="true"></i><span class="under-anim">Demo</span></a></li>
+                    <li><a target="_blank" class="button" href="https://clabounty.itch.io/sudoku-solver"><i
+                                class="fa fa-download" aria-hidden="true"></i><span
+                                class="under-anim">Download</span></a>
+                    </li>
+                    <li><a target="_blank" class="button" href="https://github.com/cLaBounty/sudokuSolver"><i
+                                class="fa fa-code" aria-hidden="true"></i><span class="under-anim">Code</span></a></li>
+                </ul>
+
+                <h4>Summary</h4>
+                <p>A Sudoku solver that uses backtracking to find a solution to any solvable game. Added functionality
+                    to play the game as well as manually input your own board.
+                </p>
+            </div>
+
+            <div class="learn-more-preview">
+                <video muted playsinline preload="metadata">
+                    <source src="assets/sudokuSolverPreview.mp4#t=0.01" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <h4>The Solving Method</h4>
+        <p>The solving method that I chose to implement uses backtracking. Backtracking is when you revert back to the
+            previous step or solution as soon as it is determined that the current solution cannot be continued into a
+            complete one. The algorithm starts by finding an empty spot on the board and attempts to put all numbers
+            (1-9) in that spot. It then checks each number to see if it is possible to put it in that spot by seeing if
+            there is already the same number in that row, column, or box. If a possible number is found, then put that
+            number in the spot, and recursively attempt to fill the next empty spot of the board. If a possible number
+            is not found, then backtrack to the previous spot, reset it, and continue to look for a different possible
+            number. When there are no empty spots left on the board, then the algorithm arrives at the base case, and
+            the board is solved.
+        </p>
+
+        <h4>How it was Built</h4>
+        <p>For this project, I first built a text version in Python that takes a Suduko board, represented by a 2D list
+            of integers, and prints a nicely formatted solved board to the terminal. I then decided that I wanted to
+            create a GUI version using Pygame where the backtracking algorithm used to solve the board could be
+            visualized. The algorithm used for the text version could also be applied to the GUI version and I simply
+            modified and updated the board during different parts of the algorithm. For example, when a possible number
+            is found for an empty cell, it gets filled with that number and a green outline. When there isn't a possible
+            number for an empty cell and the algorithm backtracks, then the cell without any possibilities gets filled
+            with an 'X' and a red outline. After implementing the solving visualization, I decided that I wanted to add
+            functionality to play the game as well as manually input your own board. These both involve entering a
+            number on the board, which can only be done when the number can possibly be put in the cell and the board
+            can still be solved with the number in the cell.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>Designed and Developed by <strong>Cameron LaBounty</strong></p>
+</footer>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+</body>
+
+</html>
