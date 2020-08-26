@@ -13,32 +13,32 @@
 
     --clr-dark: #1d1d1d;
     --clr-grey: #666666;
-    --clr-light: #e7e7e7;
+    --clr-light: #e9e9e9;
     --clr-accent: #448ee5;
 
-    --fs-h1: 5.25em;
-    --fs-h2: 3.75em;
-    --fs-h3: 2.05em;
-    --fs-h4: 1.5em;
-    --fs-home-btn: 1.35em;
-    --fs-project-btn: 1.15em;
-    --fs-tech-btn: 1em;
-    --fs-nav: 1.175em;
-    --fs-body: 1.15em;
+    --fs-h1: 5.75rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 2.15rem;
+    --fs-h4: 1.5rem;
+    --fs-home-btn: 1.4rem;
+    --fs-project-btn: 1.2rem;
+    --fs-tech-btn: 1.15rem;
+    --fs-nav: 1.3rem;
+    --fs-body: 1.175rem;
 }
 
 /* Smaller Screens */
 @media (max-width: 1050px) {
     :root {
-        --fs-h1: 3.75em;
-        --fs-h2: 2.5em;
-        --fs-h3: 1.6em;
-        --fs-h4: 1.25em;
-        --fs-home-btn: 1.25em;
-        --fs-project-btn: 0.84em;
-        --fs-tech-btn: 1em;
-        --fs-nav: 1.45em;
-        --fs-body: 1.1em;
+        --fs-h1: 4rem;
+        --fs-h2: 2.75rem;
+        --fs-h3: 1.75rem;
+        --fs-h4: 1.5rem;
+        --fs-home-btn: 1.35rem;
+        --fs-project-btn: 1rem;
+        --fs-tech-btn: 1rem;
+        --fs-nav: 1.5rem;
+        --fs-body: 1.15rem;
     }
 }
 
@@ -54,6 +54,9 @@ body {
     font-family: var(--ff-lato);
     font-size: var(--fs-body);
     line-height: 1.6;
+}
+p {
+    margin: 0.5em 0;
 }
 strong {
     font-weight: var(--fw-bold);
@@ -208,7 +211,7 @@ header {
 }
 
 #navbar .button {
-    padding: 0.7rem 1.4rem;
+    padding: 0.6rem 1.1rem 0.75rem 1.1rem;
 }
 
 #mobile-nav-toggle { display: none; }
@@ -229,7 +232,7 @@ header {
 #home p {
     max-width: 38.9em;
     margin: 1em 0 1.5em 0;
-    font-size: calc(var(--fs-body) + 0.05em);
+    font-size: calc(var(--fs-body) + 0.1em);
 }
 
 #home-btns {
@@ -241,7 +244,7 @@ header {
 
 #home-btns a {
     margin: 0 0.5em;
-    padding: 0.7rem 1.4rem;
+    padding: 0.5rem 1.1rem;
     font-size: var(--fs-home-btn);
 }
 
@@ -298,9 +301,6 @@ video {
 .description h4 {
 
 }
-.description p {
-    margin: 0.5em 0;
-}
 .visit-project-btns {
     list-style: none;
     margin: 0.5em 0;
@@ -312,7 +312,7 @@ video {
     margin-right: 0.4em;
 }
 .visit-project-btns a {
-    padding: 0.7rem 1.4rem;
+    padding: 0.65rem 1.1rem;
     font-size: var(--fs-project-btn);
 }
 .learn-more {
@@ -320,7 +320,7 @@ video {
     justify-content: flex-start;
 }
 .learn-more a {
-    padding: 0.7rem 1.4rem;
+    padding: 0.55rem 1.1rem;
     font-size: var(--fs-project-btn);
 }
 #last-project {
@@ -487,7 +487,7 @@ video {
 
 #send-btn {
     width: max-content;
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1rem;
     margin-top: 1em;
 }
 
@@ -510,25 +510,14 @@ footer p {
 
 /* Learn More Pages */
 .learn-more-page {
-    padding: 8em 0 4em 0;
-}
-.learn-more-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.learn-more-info {
-    width: 50%;
-    padding-right: 2.5em;
+    padding: 7em 0 4em 0;
 }
 .learn-more-preview {
+    float: right;
     width: 50%;
-    margin: 0.5em 0;
-    padding: 0;
+    margin: 0 0 1em 1.25em;
+    padding: 1em 2.25em 0 0;
 }
-
-
-
 
 /* Smaller Device Changes */
 @media (max-width: 1050px) { 
@@ -696,15 +685,22 @@ footer p {
         font-size: var(--fs-tech-btn);
         font-weight: var(--fw-bold);
         border-radius: 1em;
-        margin: 0.2em 0.4em 0.2em 0;
-        padding: 0.15em 0.75em;
+        margin: 0.2em 0.3em 0.2em 0;
+        padding: 0.15rem 0.7rem;
         
+    }
+    .visit-project-btns {
+        margin: 0.25em 0;
     }
     .visit-project-btns li {
         margin-right: 0.2em;
     }
-    .visit-project-btns a, .learn-more a {
-        padding: 0.5rem 0.75rem;
+    .visit-project-btns a {
+        padding: 0.5rem 0.55rem;
+    }
+
+    .learn-more a {
+        padding: 0.35rem 0.7rem;
     }
 
     /* Contact */
@@ -744,17 +740,19 @@ footer p {
         display: none;
     }
 
+    /* Learn More Pages */
     .learn-more-page {
-        padding: 6em 0 1em 0;
+        padding: 5.5em 0 1em 0;
     }
-    .learn-more-top {
-        flex-direction: column;
+    .learn-more-page h2 {
+        font-size: 2.2rem;
     }
-    .learn-more-info {
-        width: 100%;
-        padding: 0;
+    .learn-more-page ul {
+        margin: 0.25em 0 0 0;
     }
     .learn-more-preview {
         width: 100%;
+        margin: 0.5em 0 1em 0;
+        padding: 0;
     }
 }
