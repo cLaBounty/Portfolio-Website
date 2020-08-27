@@ -36,7 +36,7 @@
         --fs-body: 1.15rem;
         --fs-nav: 1.5rem;
         --fs-home-btn: 1.35rem;
-        --fs-project-btn: 0.94rem;
+        --fs-project-btn: 0.99rem;
         --fs-tech-btn: 1rem;
     }
 }
@@ -163,10 +163,6 @@ a {
     border: solid 2px var(--clr-accent);
     border-radius: 2rem;
     letter-spacing: 0.1rem;
-}
-
-.button i {
-    padding-right: 0.35em;
 }
 
 .button:hover {
@@ -315,6 +311,10 @@ video {
 .visit-project-btns .button {
     font-size: var(--fs-project-btn);
     padding: 0.65rem 1.1rem;
+}
+
+.visit-project-btns .button i {
+    padding-right: 0.325rem;
 }
 
 .learn-more {
@@ -654,7 +654,8 @@ footer p {
     }
 
     .mobile-preview {
-        display: block;
+        display: flex;
+        width: 100%;
         margin: 0.5em 0;
     }
 
@@ -678,6 +679,10 @@ footer p {
 
     .visit-project-btns .button {
         padding: 0.5rem 0.55rem;
+    }
+
+    .visit-project-btns .button i {
+        padding-right: 0.1rem;
     }
 
     .learn-more .button {
@@ -725,7 +730,7 @@ footer p {
 
     /* Learn More Pages */
     .learn-more-page {
-        padding: 5.5em 0 1.5em 0;
+        padding: 5.5em 0 1em 0;
     }
 
     .learn-more-page h2 {
