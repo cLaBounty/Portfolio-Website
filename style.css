@@ -511,10 +511,13 @@ footer p {
 }
 
 .learn-more-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: right;
+    width: 50%;
     margin: 0 0 1em 1.25em;
     padding: 1em 2.25em 0 0;
-    width: 50%;
 }
 
 /* Small Device Changes */
@@ -655,8 +658,11 @@ footer p {
 
     .mobile-preview {
         display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         margin: 0.5em 0;
+        padding: 0;
     }
 
     .description {
