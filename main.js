@@ -1,14 +1,4 @@
 $(document).ready(function () {
-    // set autoplay on videos if user is on iPhone or iPod
-    var agent = navigator.userAgent;
-    var isIphone = ((agent.indexOf('iPhone') != -1) || (agent.indexOf('iPod') != -1));
-
-    if (isIphone) {
-        $("video").each(function () {
-            $(this).attr("autoplay", true);
-        });
-    }
-
     // hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
 
