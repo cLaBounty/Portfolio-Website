@@ -36,7 +36,7 @@
         --fs-body: 1.15rem;
         --fs-nav: 1.5rem;
         --fs-home-btn: 1.35rem;
-        --fs-project-btn: 0.99rem;
+        --fs-project-btn: 1.02rem;
         --fs-tech-btn: 1rem;
     }
 }
@@ -688,7 +688,7 @@ footer p {
     }
 
     .visit-project-btns .button i {
-        padding-right: 0.1rem;
+        padding-right: 0;
     }
 
     .learn-more .button {
