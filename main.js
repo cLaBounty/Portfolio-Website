@@ -11,17 +11,21 @@ $(document).ready(function () {
 
     // hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
+
     window.onscroll = () => {
         var currentScrollPos = window.pageYOffset;
+
         if (prevScrollpos > currentScrollPos) {
             $("header").css("top", "0");
-        } else {
+        }
+        else {
             $("header").css("top", String($("header").outerHeight() * -1) + "px");
         }
+
         prevScrollpos = currentScrollPos;
     }
 
-    // mobile navbar
+    // mobile navbar functionality
     $("#mobile-nav-toggle").click(() => {
         if ($("body").hasClass("mobile-nav-open")) {
             document.body.classList.remove("mobile-nav-open");
@@ -44,7 +48,7 @@ $(document).ready(function () {
         $("body").css("overflow", "auto");
     });
 
-    // play preview on hover
+    // play video preview on hover
     $("video").hover((event) => {
         $(event.target).get(0).play();
     });
