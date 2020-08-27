@@ -15,7 +15,7 @@ $(document).ready(function () {
     window.onscroll = () => {
         var currentScrollPos = window.pageYOffset;
 
-        if (prevScrollpos > currentScrollPos) {
+        if (prevScrollpos >= currentScrollPos) {
             $("header").css("top", "0");
         }
         else {
@@ -56,6 +56,10 @@ $(document).ready(function () {
     $("video").mouseleave((event) => {
         $(event.target)[0].currentTime = 0;
         $(event.target).get(0).pause();
+    });
+
+    $("video").click((event) => {
+        $(event.target).get(0).play();
     });
 
     // auto resize message text area
