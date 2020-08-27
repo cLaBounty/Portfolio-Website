@@ -11,32 +11,32 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-dark: #1d1d1d;
+    --clr-dark: #1f1f1f;
     --clr-grey: #666666;
-    --clr-light: #e9e9e9;
+    --clr-light: #ffffff;
     --clr-accent: #448ee5;
 
-    --fs-h1: 5.75rem;
+    --fs-h1: 5.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 2.15rem;
     --fs-h4: 1.5rem;
     --fs-body: 1.175rem;
     --fs-nav: 1.3rem;
-    --fs-home-btn: 1.4rem;
+    --fs-home-btn: 1.5rem;
     --fs-project-btn: 1.2rem;
     --fs-tech-btn: 1.15rem;
 }
 
 @media (max-width: 1050px) {
     :root {
-        --fs-h1: 4rem;
+        --fs-h1: 3.75rem;
         --fs-h2: 2.75rem;
         --fs-h3: 1.75rem;
         --fs-h4: 1.5rem;
         --fs-body: 1.15rem;
         --fs-nav: 1.5rem;
         --fs-home-btn: 1.35rem;
-        --fs-project-btn: 1.1rem;
+        --fs-project-btn: 1.075rem;
         --fs-tech-btn: 1rem;
     }
 }
@@ -131,7 +131,7 @@ a {
     bottom: .01rem;
     left: 0;
     border-radius: 1rem;
-    transition: right .4s cubic-bezier(0, .5, 0, 1);
+    transition: right 400ms cubic-bezier(0, .5, 0, 1);
 }
 
 /* Link */
@@ -146,6 +146,7 @@ a {
 /* Nav Link */
 .nav-link .under-anim {
     color: var(--clr-light);
+    transition: 250ms;
 }
 
 .nav-link .under-anim:hover, .nav-link .under-anim:hover:after {
@@ -163,6 +164,7 @@ a {
     border: solid 2px var(--clr-accent);
     border-radius: 2rem;
     letter-spacing: 0.1rem;
+    transition: 250ms;
 }
 
 .button:hover {
@@ -181,21 +183,21 @@ a {
 
 /* Navbar */
 header {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--clr-dark);
     box-shadow: 0 .8em .8em -2px rgba(0,0,0,.2);
-    letter-spacing: 0.175rem;
-    transition: top 0.3s;
+    letter-spacing: 0.15rem;
+    transition: top 250ms;
     z-index: 10;
 }
 
 #navbar ul {
-    float: right;
     list-style: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0;
 }
 
 #navbar li {
@@ -213,30 +215,28 @@ header {
 
 /* Home */
 #home {
+    text-align: center;
+    padding: 9.5em 0 3em 0;
+}
+
+#home-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: max-content;
-    margin-right: auto;
-    padding: 11em 0 4em 0;
+    align-items: center;
 }
 
-#home h1 {
-    position: relative;
-    right: 0.1em;
-}
-
-#home p {
-    font-size: calc(var(--fs-body) + 0.15rem);
-    margin: 0.5em 0 1.25em 0;
-    max-width: 39em;
+#home-content p {
+    font-size: 1.5rem;
+    line-height: 1.85em;
+    max-width: 31em;
 }
 
 #home-btns {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    max-width: 31em;
     width: 100%;
+    margin-top: 0.5em;
 }
 
 #home-btns .button {
@@ -247,7 +247,7 @@ header {
 
 /* Projects */
 #projects h2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
 }
 
 .project {
@@ -270,6 +270,11 @@ video {
     width: 100%;
     border-radius: 1.5em;
     box-shadow: 0 0 1.75em rgba(0, 0, 0, 0.5);
+    transition: 250ms;
+}
+
+video:hover {
+    transition: 250ms;
 }
 
 .description {
@@ -427,6 +432,7 @@ video {
     width: max-content;
     margin-top: 1em;
     padding: 0.7rem 1rem;
+    transition: 250ms;
 }
 
 #send-btn:hover {
@@ -459,6 +465,7 @@ video {
     font-size: 2.1em;
     color: var(--clr-dark);
     padding-right: 0.7rem;
+    transition: 250ms;
 }
 
 #linkedin-square {
@@ -476,12 +483,10 @@ video {
 
 .link:hover i {
     color: var(--clr-accent);
-    transition: 250ms ease;
 }
 
 .link:hover #linkedin-square i {
     background-color: var(--clr-accent);
-    transition: 250ms ease;
 }
 
 .link:hover .under-anim, .link:hover .under-anim:after {
@@ -510,14 +515,25 @@ footer p {
     padding: 6.5em 0 2em 0;
 }
 
+.learn-more-content h4 {
+    margin-top: 1em;
+}
+
 .learn-more-preview {
     display: flex;
     justify-content: center;
     align-items: center;
     float: right;
     width: 50%;
-    margin: 0 0 1em 1.25em;
+    margin: 0 0 1em 1.5em;
     padding: 1em 2.25em 0 0;
+}
+
+hr {
+    overflow: hidden;
+    height: 2px;
+    background-color: var(--clr-dark);
+    border: none;
 }
 
 /* Small Device Changes */
@@ -527,8 +543,6 @@ footer p {
     }
 
     header {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
         padding: 2em;
     }
@@ -627,19 +641,16 @@ footer p {
 
     /* Home */
     #home {
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        padding: 6em 0 3.5em 0;
+        padding: 5.5em 0 3em 0;
     }
-
-    #home h1 {
-        right: 0;
-    }
-
-    #home p {
+    
+    #home-content p {
         font-size: var(--fs-body);
-        margin: 0.5em 0 1em 0;
+        max-width: none;
+    }
+    
+    #home-btns {
+        max-width: none;
     }
 
     /* Projects */
@@ -689,7 +700,7 @@ footer p {
     }
 
     .visit-project-btns .button i {
-        padding-right: 0;
+        padding-right: 0.1rem;
     }
 
     .learn-more .button {

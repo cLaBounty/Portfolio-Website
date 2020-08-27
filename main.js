@@ -4,7 +4,7 @@ $(document).ready(function () {
     var isIphone = ((agent.indexOf('iPhone') != -1) || (agent.indexOf('iPod') != -1));
 
     if (isIphone) {
-        $("video").each(() => {
+        $("video").each(function () {
             $(this).attr("autoplay", true);
         });
     }
@@ -12,7 +12,7 @@ $(document).ready(function () {
     // hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
 
-    window.onscroll = () => {
+    window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
 
         if (prevScrollpos >= currentScrollPos) {
@@ -49,17 +49,16 @@ $(document).ready(function () {
     });
 
     // play video preview on hover
-    $("video").hover((event) => {
-        $(event.target).get(0).play();
+    $("video").on("mouseover click", function () {
+        $(this).get(0).play();
+        $(this).css("box-shadow", "0 0 1.75em var(--clr-accent)");
+
     });
 
-    $("video").mouseleave((event) => {
-        $(event.target)[0].currentTime = 0;
-        $(event.target).get(0).pause();
-    });
-
-    $("video").click((event) => {
-        $(event.target).get(0).play();
+    $("video").on("mouseleave ended", function () {
+        $(this)[0].currentTime = 0;
+        $(this).get(0).pause();
+        $(this).css("box-shadow", "0 0 1.75em rgba(0, 0, 0, 0.5)");
     });
 
     // auto resize message text area
