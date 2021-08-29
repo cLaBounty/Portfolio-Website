@@ -7,15 +7,12 @@
 /* Custom Properties */
 :root {
     --ff-lato: 'Lato', sans-serif;
-
     --fw-reg: 300;
     --fw-bold: 900;
-
     --clr-dark: #1f1f1f;
     --clr-grey: #666666;
     --clr-light: #ffffff;
     --clr-accent: #448ee5;
-
     --fs-h1: 5.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 2.15rem;
