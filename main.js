@@ -42,12 +42,12 @@ $(document).ready(function () {
     $("video").on("mouseover click", function () {
         $(this).get(0).play();
         $(this).css("box-shadow", "0 0 1.75em var(--clr-accent)");
-
     });
 
     $("video").on("mouseleave ended", function () {
-        $(this)[0].currentTime = 0;
-        $(this).get(0).pause();
+        const video = $(this).get(0);
+        video.currentTime = 0;
+        setTimeout(() => video.pause(), 10);
         $(this).css("box-shadow", "0 0 1.75em rgba(0, 0, 0, 0.5)");
     });
 
