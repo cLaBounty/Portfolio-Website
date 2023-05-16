@@ -44,21 +44,104 @@
         <!-- Home -->
         <section id="home">
             <h1>Cameron LaBounty</h1>
-            <div id="home-content">
-                <p>I am a <strong>Developer</strong> and <strong>Computer Science Student</strong> attending Champlain
-                    College where I have excelled in courses involving software development, game programming, and mathematics.
-                </p>
-
-                <div id="home-btns">
-                    <a class="button" href="#projects"><span class="under-anim">Projects</span></a>
-                    <a target="_blank" class="button" href="resume.pdf"><span class="under-anim">Resume</span></a>
-                </div>
+            <h3>Software Engineer | App Developer</h3>
+            <div id="home-btns">
+                <a class="button" href="#projects"><span class="under-anim">Projects</span></a>
+                <a target="_blank" class="button" href="resume.pdf"><span class="under-anim">Resume</span></a>
             </div>
         </section>
 
         <!-- Projects -->
         <section id="projects">
             <h2 class="section-title">Projects</h2>
+
+            <!-- Locality -->
+            <div class="project">
+                <div class="desktop-preview">
+                    <div class="app-icon">
+                        <img class="app-logo" src="assets/localityAppIcon.png">
+                    </div>
+                </div>
+                
+                <div class="description">
+                    <h3>Locality: Social Media</h3>
+
+                    <ul class="used-tech">
+                        <li>Kotlin</li>
+                        <li>Jetpack Compose</li>
+                        <li>Swift</li>
+                        <li>SwiftUI</li>
+                        <li>Kotlin Multiplatform Mobile</li>
+                        <li>Firebase</li>
+                        <li>Mapbox</li>
+                    </ul>
+
+                    <h4>Summary</h4>
+                    <p>A location-based social media platform for iOS and Android.</p>
+
+                    <div class="mobile-preview">
+                        <div class="app-icon">
+                            <img class="app-logo" src="assets/localityAppIcon.png">
+                        </div>
+                    </div>
+
+                    <ul class="visit-project-btns">
+                        <li><a target="_blank" class="button" href="https://localitysocialmedia.com">
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                                <span class="under-anim">Download</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rubik's Cube Solver -->
+            <div class="project">
+                <div class="description">
+                    <h3>Rubik's Cube Solver</h3>
+
+                    <ul class="used-tech">
+                        <li>Processing</li>
+                    </ul>
+
+                    <h4>Summary</h4>
+                    <p>A 3D Rubik's Cube simulation and solver for 2x2, 3x3, and 4x4 cubes. Implemented a popular
+                        blindfolded solving method used by competitive speed cubers. Added functionality to solve
+                        and manually turn the cube by clicking a face and dragging the mouse in the direction of the
+                        turn.
+                    </p>
+
+                    <div class="mobile-preview">
+                        <video muted playsinline preload="metadata">
+                            <source src="assets/rubiksCubeSolverPreview.mp4#t=0.01" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <ul class="visit-project-btns">
+                        <li><a target="_blank" class="button" href="https://www.youtube.com/watch?v=oZSwaQ6uV1U">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <span class="under-anim">Demo</span></a>
+                        </li>
+                        <li><a target="_blank" class="button" href="https://clabounty.itch.io/rubiks-cube-solver">
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                                <span class="under-anim">Download</span></a>
+                        </li>
+                        <li><a target="_blank" class="button" href="https://github.com/cLaBounty/Rubiks-Cube-Solver">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                                <span class="under-anim">Code</span></a>
+                        </li>
+                    </ul>
+
+                    <div class="learn-more">
+                        <a class="button" href="rubiksCubeSolver.html"><span class="under-anim">Learn More</span></a>
+                    </div>
+                </div>
+
+                <div class="desktop-preview">
+                    <video muted playsinline preload="metadata">
+                        <source src="assets/rubiksCubeSolverPreview.mp4#t=0.01" type="video/mp4">
+                    </video>
+                </div>
+            </div>
 
             <!-- S.P.U.C - SPace UnContained -->
             <div class="project">
@@ -281,63 +364,8 @@
                 </div>
             </div>
 
-            <!-- Rubik's Cube Solver -->
-            <div class="project">
-                <div class="description">
-                    <h3>Rubik's Cube Solver</h3>
-
-                    <ul class="used-tech">
-                        <li>Processing</li>
-                    </ul>
-
-                    <h4>Summary</h4>
-                    <p>A 3D Rubik's Cube simulation and solver for 2x2, 3x3, and 4x4 cubes. Implemented a popular
-                        blindfolded solving method used by competitive speed cubers. Added functionality to solve
-                        and manually turn the cube by clicking a face and dragging the mouse in the direction of the
-                        turn.
-                    </p>
-
-                    <div class="mobile-preview">
-                        <video muted playsinline preload="metadata">
-                            <source src="assets/rubiksCubeSolverPreview.mp4#t=0.01" type="video/mp4">
-                        </video>
-                    </div>
-
-                    <ul class="visit-project-btns">
-                        <li><a target="_blank" class="button" href="https://www.youtube.com/watch?v=oZSwaQ6uV1U">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                <span class="under-anim">Demo</span></a>
-                        </li>
-                        <li><a target="_blank" class="button" href="https://clabounty.itch.io/rubiks-cube-solver">
-                                <i class="fa fa-download" aria-hidden="true"></i>
-                                <span class="under-anim">Download</span></a>
-                        </li>
-                        <li><a target="_blank" class="button" href="https://github.com/cLaBounty/Rubiks-Cube-Solver">
-                                <i class="fa fa-code" aria-hidden="true"></i>
-                                <span class="under-anim">Code</span></a>
-                        </li>
-                    </ul>
-
-                    <div class="learn-more">
-                        <a class="button" href="rubiksCubeSolver.html"><span class="under-anim">Learn More</span></a>
-                    </div>
-                </div>
-
-                <div class="desktop-preview">
-                    <video muted playsinline preload="metadata">
-                        <source src="assets/rubiksCubeSolverPreview.mp4#t=0.01" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-
             <!-- Golf Stats Tracker -->
             <div class="project">
-                <div class="desktop-preview">
-                    <video muted playsinline preload="metadata">
-                        <source src="assets/golfStatsTrackerPreview.mp4#t=0.01" type="video/mp4">
-                    </video>
-                </div>
-
                 <div class="description">
                     <h3>Golf Stats Tracker</h3>
 
@@ -372,10 +400,22 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="desktop-preview">
+                    <video muted playsinline preload="metadata">
+                        <source src="assets/golfStatsTrackerPreview.mp4#t=0.01" type="video/mp4">
+                    </video>
+                </div>
             </div>
 
             <!-- Golf Game-->
             <div class="project" id="last-project">
+                <div class="desktop-preview">
+                    <video muted playsinline preload="metadata">
+                        <source src="assets/golfGamePreview.mp4#t=0.01" type="video/mp4">
+                    </video>
+                </div>
+
                 <div class="description">
                     <h3>Golf Game</h3>
 
@@ -403,12 +443,6 @@
                                 <span class="under-anim">Code</span></a>
                         </li>
                     </ul>
-                </div>
-
-                <div class="desktop-preview">
-                    <video muted playsinline preload="metadata">
-                        <source src="assets/golfGamePreview.mp4#t=0.01" type="video/mp4">
-                    </video>
                 </div>
             </div>
         </section>
